@@ -14,13 +14,13 @@ return;
 }
 for (i = 0; i < size; i++)
 {
-for (j = 0; j <= size; j++)
+for (j = 1; j <= size; j++)
 {
-if (array[j] > array[j + 1])
+if (array[j - 1] > array[j])
 {
-t = array[j];
-array[j] = array[j + 1];
-array[j + 1] = t;
+t = array[j - 1];
+array[j - 1] = array[j];
+array[j] = t;
 print_array(array, size);
 }
 }
