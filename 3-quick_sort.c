@@ -70,7 +70,7 @@ void impl(int *array, unsigned int l, unsigned int h, int size)
  *@array: array
  *@size: size
  */
-void quick_sort(int *array, unsigned int size)
+void quick_sort(int *array, size_t size)
 {
 	if (!array || size < 2)
 	{
