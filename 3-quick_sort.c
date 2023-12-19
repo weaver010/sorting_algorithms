@@ -14,10 +14,10 @@ void swap(int *array, unsigned int x, unsigned int y)
 	array[y] = t;
 }
 /**
- *partition - partition 
+ *partition - partition
  *@array: array
  *@l: low
- *@h: high 
+ *@h: high
  *@size: size
  *Return: o
  */
