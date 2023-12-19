@@ -12,7 +12,7 @@ if (array == NULL || size <= 1)
 {
 return;
 }
-for (i = 0; i < size; i++)
+for (i = 0; i <= size; i++)
 {
 for (j = 1; j <= size; j++)
 {
