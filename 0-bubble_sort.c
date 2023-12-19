@@ -6,11 +6,11 @@
  */
 void swap(int *x, int *y)
 {
-	int t;
+int t;
 
-	t = *x;
-	*x = *y;
-	*y = t;
+t = *x;
+*x = *y;
+*y = t;
 }
 /**
  * bubble_sort - sort
@@ -19,17 +19,21 @@ void swap(int *x, int *y)
  */
 void bubble_sort(int *array, size_t size)
 {
-	unsigned int i = 0, j = 0;
-	
-	if (size <= 1)
+unsigned int i = 0, j = 0;
+
+if (size <= 1)
 {
-		return;
+return;
 }
-	for (i = 0; i < (size - 1); i++)
-		for (j = 0; j <=size; j++)
-			if (array[j] > array[j + 1])
-			{
-				swap(&array[j - 1], &array[j]);
-				print_array(array, size);
-			}
+for (i = 0; i < (size - 1); i++)
+{
+for (j = 1; j <= size; j++)
+{
+if (array[j - 1] > array[j])
+{
+swap(&array[j - 1], &array[j]);
+print_array(array, size);
+}
+}
+}
 }
