@@ -1,18 +1,5 @@
 #include "sort.h"
 /**
- * swap - swap
- * @x:  x
- * @y: y
- */
-void swap(int *x, int *y)
-{
-int t;
-
-t = *x;
-*x = *y;
-*y = t;
-}
-/**
  * bubble_sort - sort
  * @array: the array
  * @size: size
@@ -20,18 +7,20 @@ t = *x;
 void bubble_sort(int *array, size_t size)
 {
 unsigned int i = 0, j = 0;
-
-if (size < 2 || array == NULL)
+int t = 0;
+if (size < 2)
 {
 return;
 }
-for (i = 0; i < (size - 1); i++)
+for (i = 0; i < size; i++)
 {
-for (j = 1; j <= size; j++)
+for (j = 0; j < size; j++)
 {
-if (array[j - 1] > array[j])
+if (array[j] > array[j + 1] && array[j + 1])
 {
-swap(&array[j - 1], &array[j]);
+t = array[j];
+array[j] = array[j + 1];
+array[j + 1] = t;
 print_array(array, size);
 }
 }
